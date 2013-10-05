@@ -58,6 +58,7 @@ htmlTemplate - default template for everything :-)
 						<li><a href="#" title="Home">Home</a></li>
 						<!-- /if first -->
 						<li><a href="#" title="Next">Next</a></li>
+						<li>Article</li>
 					<!-- /foreach -->
 					</ul>
 
@@ -195,11 +196,9 @@ htmlTemplate - default template for everything :-)
 				<nav>
 					<ul id="nav-main" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<!-- foreach aMenu -->
-						<li>
-							<a href="#" title="home" itemprop="url"><span itemprop="name">home</span></a>
-							<a href="#" title="link" itemprop="url"><span itemprop="name">Link</span></a>
-							<a href="#" title="link" itemprop="url"><span itemprop="name">Link</span></a>
-						</li>
+						<li class="selected"><a href="#" title="home" itemprop="url"><span itemprop="name">home</span></a></li>
+						<li><a href="#" title="Category" itemprop="url"><span itemprop="name">Category</span></a></li>
+						<li><a href="#" title="Category 2" itemprop="url"><span itemprop="name">Category 2</span></a></li>
 						<!-- /foreachh -->
 					</ul>
 				</nav>
