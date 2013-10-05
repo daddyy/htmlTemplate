@@ -42,11 +42,10 @@ htmlTemplate - default template for everything :-)
 			<div class="container">
 				<header>
 					<hgroup>
-						<h1 id="logo" itemscope itemtype="http://schema.org/Brand"><a href="#" title=""><img src="http://placekitten.com/90/24" alt="logo" itemprop="logo"><span class="hide" itemprop="name">logo</span></a></h1>
+						<h1 id="logo" itemscope itemtype="http://schema.org/Brand" class="no-edges"><a href="#" title="logo home"><img src="http://placekitten.com/120/80" alt="logo" itemprop="logo"><span class="hide" itemprop="name">logo</span></a></h1>
 						<h2 id="slogan"></h2>
 					</hgroup>
 				</header>
-				<p></p>
 			</div>
 		</div>
 		<div class="content">
@@ -55,10 +54,10 @@ htmlTemplate - default template for everything :-)
 					<ul id="breadcrumbs" class="nav no-edges no-style inline" itemprop="breadcrumb">
 					<!-- foreach aBreadcrumbs -->
 						<!-- if first -->
-						<li><a href="#" title="Home">Home</a></li>
+						<li><a href="#" title="Home"><span>Home</span></a>&gt;</li>
 						<!-- /if first -->
-						<li><a href="#" title="Next">Next</a></li>
-						<li>Article</li>
+						<li><a href="#" title="Next"><span>Next</span></a>&gt;</li>
+						<li><span>Article</span></li>
 					<!-- /foreach -->
 					</ul>
 
@@ -66,7 +65,7 @@ htmlTemplate - default template for everything :-)
 				    	<h1 class="title">Main title of this page</h1>
 					    <p class="desc">Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
 						<!-- if aImages -->
-						<div class="images">
+						<div class="images pull-right">
 							<section>
 								<ul class="no-edges no-style inline">
 								<!-- foreach aImages -->
@@ -74,14 +73,14 @@ htmlTemplate - default template for everything :-)
 									<li class="main">
 										<figure>
 											<a href="#" title="linked image" data-target="prettyPhoto[gallery]">
-												<img src="http://placekitten.com/90/24" alt="main image" itemprop="image">
+												<img src="http://placekitten.com/400/400" alt="main image" itemprop="image">
 											</a>
 										</figure>
 									</li>
 									<!-- /if first -->
 									<li class="thumbnail inline">
 										<a href="#" title="link thumbnail" data-target="prettyPhoto[gallery]">
-											<img src="http://placekitten.com/90/24" alt="thumbnail image" itemprop="image">
+											<img src="http://placekitten.com/100/100" alt="thumbnail image" itemprop="image">
 										</a>
 									</li>
 								<!-- /foreach -->
@@ -91,13 +90,14 @@ htmlTemplate - default template for everything :-)
 				    	<!-- /if -->
 						<div class="text">
 							<section>
-							<!-- formatable text -->
+								<p>Nullam eget quam fermentum, placerat orci placerat, rutrum est. Curabitur at diam justo. Sed quam purus; porttitor quis convallis id, vestibulum in ligula. Maecenas ac consectetur neque. Curabitur eu semper metus, nec posuere odio. Cras lobortis non tellus nec elementum. Donec bibendum pharetra lacinia.</p>
+								<p>Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
 							</section>
 						</div>
 
 						<ul class="no-edges no-style" id="files">
 						<!-- foreach aFiles -->
-						    <li><a href="#" title="file">file</a></li>
+						    <li><a href="#" title="file"><span class="icon icon-file"></span>file</a></li>
 						<!-- /foreach -->
 						</ul>
 					</article>
@@ -106,18 +106,18 @@ htmlTemplate - default template for everything :-)
 						<!-- foreach aArticles -->
 							<div class="item" itemscope itemtype="http://schema.org/Article">
 								<article>
-									<a href="#" title="link name" class="pull-left" itemprop="url">
-										<figure>
-											<img src="http://placekitten.com/90/24" alt="image name" itemprop="image">
-										</figure>
-									</a>
 									<h1 class="main" itemprop="name">
 										<a href="#" title="name">name</a>
 									</h1>
 									<div class="desc" itemprop="description">
+										<a href="#" title="link name" class="pull-left image" itemprop="url">
+											<figure>
+												<img src="http://placekitten.com/100/100" alt="image name" itemprop="image">
+											</figure>
+										</a>
 										<p>Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
 					                    <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-										<a href="#" class="btn">více</a>
+										<a href="#" class="pull-right btn">více</a>
 									</div>
 								</article>
 							</div>
@@ -126,7 +126,7 @@ htmlTemplate - default template for everything :-)
 								<li class="pull-left"><a href="#" class="btn btn-small" title="prev">prev</a></li>
 								<li class="pull-right"><a href="#" class="btn btn-small" title="next">next</a></li>
 							<!-- foreach $aSteps -->
-								<li><a href="#" class="btn btn-small" title="step 1">1</a></li>
+								<li><a href="#" class="btn btn-small" title="step n">n</a></li>
 							<!-- /foreach -->
 							</ul>
 						</section>
@@ -134,17 +134,16 @@ htmlTemplate - default template for everything :-)
 
 					<div class="listing listing-products">
 						<section>
-							<div id="sorter">
-								<form id="sort-price">
-		      						<fieldset class="no-style no-edges"> 
-			        					<label for="products-by-price">Sort by price</label> 
-			        					<select name="products-by-price" id="products-by-price">
-			        						<option value="lowestPrice">Lowest</option>
-			        						<option value="highestPrice">Highest</option>
-			        					</select>
-		      						</fieldset>
-								</form>
-							</div>
+							<form id="sorter">
+	      						<fieldset class="no-style no-edges"> 
+									<legend>Filtrace</legend>
+		        					<label for="products-by-price">Sort by price</label> 
+		        					<select name="products-by-price" id="products-by-price">
+		        						<option value="lowestPrice">Lowest</option>
+		        						<option value="highestPrice">Highest</option>
+		        					</select>
+	      						</fieldset>
+							</form>
 						<!-- foreach $aProducts -->
 							<div class="item">
 								<article>
@@ -155,24 +154,26 @@ htmlTemplate - default template for everything :-)
 							        		<span class="state">Tip</span>
 									<!-- /foreach -->
 							    		</div>
-										<a href="#" title="link name" class="image">
-											<figure>
-												<img src="http://placekitten.com/90/24" alt="name of image" itemprop="image">
-											</figure>
-										</a>
-										<div class="cart" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-											<span class="prices">
-												<span class="price price-final">Price with vat&nbsp;<strong itemprop="price">259</strong><span class="currency">CZK</span></span>
-												<span class="price price-taxless">
-													Price without vat <em>200</em><span class="currency">CZK</span>
+										<div class="product-box">
+											<a href="#" title="link name" class="pull-left image">
+												<figure>
+													<img src="http://placekitten.com/200/200" alt="name of image" itemprop="image">
+												</figure>
+											</a>
+											<div class="cart pull-right" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+												<span class="prices">
+													<span class="price">Price with vat <strong itemprop="price">259</strong><span class="currency">CZK</span></span>
+													<span class="price">
+														Price without vat <em>200</em><span class="currency">CZK</span>
+													</span>
+													<span class="store-count" itemprop="availability">available</span>
 												</span>
-												<span class="store-count" itemprop="availability">available</span>
-											</span>
-											<a href="#" class="btn" title="Product detail">detail</a>
-										</div>
-										<div class="desc" itemprop="description">
-											<p>Nullam eget quam fermentum, placerat orci placerat, rutrum est. Curabitur at diam justo. Sed quam purus; porttitor quis convallis id, vestibulum in ligula. Maecenas ac consectetur neque. Curabitur eu semper metus, nec posuere odio. Cras lobortis non tellus nec elementum. Donec bibendum pharetra lacinia.</p>
-											<p>Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
+												<a href="#" class="btn" title="Product detail">detail</a>
+											</div>
+											<div class="desc" itemprop="description">
+												<p>Nullam eget quam fermentum, placerat orci placerat, rutrum est. Curabitur at diam justo. Sed quam purus; porttitor quis convallis id, vestibulum in ligula. Maecenas ac consectetur neque. Curabitur eu semper metus, nec posuere odio. Cras lobortis non tellus nec elementum. Donec bibendum pharetra lacinia.</p>
+												<p>Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
+											</div>
 										</div>
 									</div>
 								</article>
@@ -182,7 +183,7 @@ htmlTemplate - default template for everything :-)
 								<li class="pull-left"><a href="#" class="btn btn-small" title="prev">prev</a></li>
 								<li class="pull-right"><a href="#" class="btn btn-small" title="next">next</a></li>
 							<!-- foreach $aSteps -->
-								<li><a href="#" class="btn btn-small" title="step 1">1</a></li>
+								<li><a href="#" class="btn btn-small" title="step n">n</a></li>
 							<!-- /foreach -->
 							</ul>
 						</section>
@@ -194,18 +195,27 @@ htmlTemplate - default template for everything :-)
 		<div id="absolute">
 			<div class="container">
 				<nav>
-					<ul id="nav-main" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<ul id="nav-main" class="inline no-edges no-style" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<!-- foreach aMenu -->
 						<li class="selected"><a href="#" title="home" itemprop="url"><span itemprop="name">home</span></a></li>
 						<li><a href="#" title="Category" itemprop="url"><span itemprop="name">Category</span></a></li>
-						<li><a href="#" title="Category 2" itemprop="url"><span itemprop="name">Category 2</span></a></li>
+						<li class="last"><a href="#" title="Category 2" itemprop="url"><span itemprop="name">Category 2</span></a>
+							<ul class="sub no-edges no-style">
+								<!-- if you want make those <li> sub with width:auto you have to make the spaces as "&nbsp;" -->
+								<li><a href="#" title="SubCategory" itemprop="url"><span itemprop="name">SubCategory</span></a></li>
+								<li><a href="#" title="SubCategory 2" itemprop="url"><span itemprop="name">SubCategory&nbsp;2</span></a>
+							</ul>
+						</li>
 						<!-- /foreachh -->
 					</ul>
 				</nav>
-				<form id="formn-search">
-					<label for="input-search"></label>
-					<input id="input-search" type="search" required="required">
-					<button class="btn">Send</button>
+				<form id="form-search">
+					<fieldset class="no-edges no-style">
+						<legend>Vyhledávání</legend>
+						<label for="input-search"></label>
+						<input id="input-search" type="search" required="required" class="input">
+						<button class="btn">Send</button>
+					</fieldset>
 				</form>
 				<div id="quick-info" data-toggle="toggle-hover">
 					<!-- foreach aInfo -->

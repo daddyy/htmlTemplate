@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-	$('.hide').hide();
+	$('.hide, #nav-main .sub').hide();
 
 	$("a[data-target^='prettyPhoto']").prettyPhoto({
 		show_title: true,
@@ -125,6 +125,6 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-    $("*[required]").prev('label').append('&nbsp;<span class="red">*</span>');
+    //$("*[required]").not('#input-search').prev('label').append('&nbsp;<span class="red">*</span>');
 
 });

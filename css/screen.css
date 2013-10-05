@@ -75,6 +75,7 @@ a:hover, a:active, a:focus {
 button {
 }
 .btn {
+	padding: 0.5em 1em;
 }
 .btn .icon-small {	
 }
@@ -85,37 +86,44 @@ button {
 }
 
 /*
-	INPUTS
+	INPUTS and LABEL
 */
 .input {
 	padding: 0.5em 1em;
-	width: 50%;
 }
 /*
 	ICONS
 */
 .icon {
-	background-image: url(img/icons.png);
+	background-image: url(http://placekitten.com/20/20);
 	background-color: transparent;
 	background-repeat: no-repeat;
 	display: inline-block;
 }
 a:hover .icon, .btn:hover .icon, .selected .icon {
-	background-image: url(img/icons-hover.png);
-}
-.icon {
-	display: inline-block;
+	background-image: url(http://placekitten.com/20/20);
 }
 .icon-name {
-	width: 29px;
-	height: 29px;
+	width: 20px;
+	height: 20px;
+	background-position: 0 0;
+}
+.icon-file {
+	width: 20px;
+	height: 20px;
 	background-position: 0 0;
 }
 /*
 	BACKGROUND
 */
-{
+.input, .btn:hover {
+	background-color: #F2F8F9;
+}
+.btn {
 	background-color: #006bb6;
+}
+#nav-main, #nav-main .sub {
+	background-color: #f1F1F1;
 }
 {
 	background-image: none;
@@ -133,8 +141,11 @@ a:hover .icon, .btn:hover .icon, .selected .icon {
 	border:;
 	border-color:
 */
-{
+.input, .btn {
 	border: 1px solid;
+}
+.input, .btn:hover {
+	border-color: #006bb6
 }
 {
 	border-color: #000000;
@@ -142,7 +153,7 @@ a:hover .icon, .btn:hover .icon, .selected .icon {
 {
 	border: 0;
 }
-{
+.btn {
 	border-color: transparent;
 }
 /*
@@ -151,20 +162,29 @@ a:hover .icon, .btn:hover .icon, .selected .icon {
 /*
 	COLORS
 */
-{
-	color: #ffffff;
+.btn {
+	color: #F2F8F9;
 }
-{
+.btn:hover {
+	color: #006bb6;
+}
+#nav-main a:hover {
 	color: #000000;
 }
 /*
 	FONT & TEXT STYLES
 */
+.price strong {
+	font-size: 1.45em;
+}
 .btn {
 	font-size: 1em;
 }
-.btn-medium {
+.btn-medium, #breadcrumbs {
 	font-size: 0.85em;
+}
+.btn-small {
+	font-size: 0.65em;
 }
 }
 {
@@ -185,7 +205,7 @@ a:hover .icon, .btn:hover .icon, .selected .icon {
 {
 	font-style: normal;
 }
-{
+.btn {
 	text-decoration: none;
 }
 {
@@ -212,6 +232,14 @@ a:hover .icon, .btn:hover .icon, .selected .icon {
 /*
 HEADER
 */
+#header {
+	height: 100px;
+}
+#logo {
+	position: absolute;
+	top: 0.25em;
+	left: 0;
+}
 /*
 	ABSOLUTE
 */
@@ -226,8 +254,31 @@ HEADER
 	/*navigation*/
 	#nav-main {
 		position: absolute;
-		top: ;
-		width: 100%;
+		top: 4em;
+		right: 0;
+	}
+	#nav-main a {
+		padding: 0.5em 1em;
+	}
+	#nav-main li {
+		position: relative;
+	}
+	#nav-main .sub {
+		position: absolute;
+		top: 2em;
+		left: 0;
+	}
+	#nav-main .last .sub {
+		left: auto;
+		right: 0;
+	}
+	#nav-main .show .sub {
+		display: block !important;
+	}
+	#form-search {
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 /*
 	PAGINATOR
@@ -281,10 +332,10 @@ HEADER
 */
 #breadcrumbs {
 	position: absolute;
-	top: -50px;
+	top: 0;
 	left: 0;
 }
-#breadcrumbs li {
+#breadcrumbs li span {
 	position: relative;
 	padding: 0.45em 0.5em;
 }
@@ -330,6 +381,9 @@ HEADER
 #files li {
 	margin-bottom: 0.5em;
 }
+#files li .icon {
+	margin-right: 0.25em;
+}
 /*
 	MODAL
 */
@@ -373,10 +427,28 @@ HEADER
 .listing-articles .btn {
 	margin-top: 0.5em;
 }
+.listing .image {
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
 #footer #address.col-4 {
 	float:left;
 	width: 25%;
 	display: inline-block;
+}
+/* price */
+.price {
+	display: block;
+}
+.currency {
+	display: inline-block;
+	margin-left: 0.15em;
+}
+.price strong {
+	
+}
+.price em {
+	
 }
 /*sitemap*/
 .sitemap ul {
