@@ -1,0 +1,228 @@
+<!--
+formatable text - don't style anything in this block, except, base font size or color
+-->
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="robots" content="">
+		<meta name="author" content="Pavel Fiala">
+		<title></title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<style type="text/css" media="screen">
+			@import "css/prettyPhoto.css";
+			@import "css/normalize.css";
+			@import "css/css3.css";
+		 	@import "css/screen.css";
+		</style>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.microdata.js"></script>
+	</head>
+	<body itemscope itemtype="http://schema.org/WebPage">
+		<ul id="navSkiplink" class="hide">
+			<li>
+				<a href="#content" title="Skip to content">Přeskočit na obsah</a>
+			</li>
+			<li>
+				<a href="#navMain" title="Skip to navigation">Přeskočit na obsah</a>
+			</li>
+		</ul>
+		<div id="header">
+			<div class="container">
+				<header>
+					<hgroup>
+						<h1 id="logo"><a href="#" title=""><img src="images/logo.png" alt=""><span class="hide" itemprop="name">logo</span></a></h1>
+						<h2 id="slogan"></h2>
+					</hgroup>
+				</header>
+				<p></p>
+			</div>
+		</div>
+		<div class="content">
+			<div class="container">
+			    <div class="page">
+					<ul id="breadcrumbs" class="nav no-edges no-style inline" itemprop="breadcrumb">
+					<!-- foreach aBreadcrumbs -->
+						<!-- if first -->
+						<li><a href="#" title="Domů">Domů</a></li>
+						<!-- /if first -->
+						<li><a href="#" title="Next">Next</a></li>
+					<!-- /foreach -->
+					</ul>
+
+					<article>
+				    	<h1 class="title">Nadpis stránky</h1>
+					    <p class="desc">Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
+						<!-- if aImages -->
+						<div class="images">
+							<section>
+								<ul class="no-edges no-style inline">
+								<!-- foreach aImages -->
+									<!-- if first -->
+									<li class="main">
+										<figure>
+											<a href="#" title="linked image" data-target="prettyPhoto[gallery]">
+												<img src="" alt="main image" itemprop="image">
+											</a>
+										</figure>
+									</li>
+									<!-- /if first -->
+									<li class="thumbnail inline">
+										<a href="#" title="link thumbnail" data-target="prettyPhoto[gallery]">
+											<img src="" alt="thumbnail image" itemprop="image">
+										</a>
+									</li>
+								<!-- /foreach -->
+								</ul>
+							</section>
+						</div>
+				    	<!-- /if -->
+						<div class="text">
+							<section>
+							<!-- formatable text -->
+							</section>
+						</div>
+
+						<ul class="no-edges no-style" id="files">
+						<!-- foreach aFiles -->
+						    <li><a href="#" title="file">file</a></li>
+						<!-- /foreach -->
+						</ul>
+					</article>
+					<div class="listing listing-articles">
+						<section>
+						<!-- foreach aArticles -->
+							<div class="item" itemscope itemtype="http://schema.org/Article">
+								<article>
+									<figure>
+										<a href="#" title="link name">
+											<img src="" alt="image name">
+										</a>
+									</figure>
+									<h1 class="main" itemprop="name">
+										<a href="#" title="name">name</a>
+									</h1>
+									<div class="desc" itemprop="description">
+										<p>Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
+										<a href="#" class="btn">více</a>
+									</div>
+								</article>
+							</div>
+							<!-- /foreach -->
+							<ul class="paginator no-edges no-style">
+							<!-- foreach $aSteps -->
+								<li>
+									<a href="#" class="btn btn-small" title="krok n">krok n</a>
+								</li>
+							<!-- /foreach -->
+							</ul>
+						</section>
+					</div>
+
+					<div class="listing listing-products">
+						<section>
+							<div id="sorter">
+								<form id="sort-price">
+		      						<fieldset class="no-style no-edges"> 
+			        					<label for="products-by-price">Seřadit podle ceny</label> 
+			        					<select name="products-by-price" id="products-by-price">
+			        						<option value="lowestPrice">Nejnížsí</option>
+			        						<option value="highestPrice">Nejvyšší</option>
+			        					</select>
+		      						</fieldset>
+								</form>
+							</div>
+						<!-- foreach $aProducts -->
+							<div class="item">
+								<article>
+									<div class="inner" itemscope itemtype="http://schema.org/Product">
+										<h1 class="main" itemprop="name"><a href="#" title="produkt">produkt</a></h1>
+						        		<div class="states">
+						        	<!-- foreach $aStates -->
+							        		<span class="state">Tip</span>
+									<!-- /foreach -->
+							    		</div>
+										<a href="#" title="link name" class="image">
+											<figure>
+												<img src="http://www.drevenanastenka.cz/img/product-preview.jpg" alt="name of image" itemprop="image">
+											</figure>
+										</a>
+										<div class="cart" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+											<span class="prices">
+												<span class="price price-final">Cena s DPH&nbsp;<strong itemprop="price">259</strong><span class="currency">Kč</span></span>
+												<span class="price price-taxless">
+													bez DPH 200 Kč
+												</span>
+												<span class="store-count" itemprop="availability">dostupný</span>
+											</span>
+											<a href="#" class="btn" title="produkt">detail</a>
+										</div>
+										<div class="desc" itemprop="description">
+											<p>Nullam eget quam fermentum, placerat orci placerat, rutrum est. Curabitur at diam justo. Sed quam purus; porttitor quis convallis id, vestibulum in ligula. Maecenas ac consectetur neque. Curabitur eu semper metus, nec posuere odio. Cras lobortis non tellus nec elementum. Donec bibendum pharetra lacinia.</p>
+											<p>Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
+										</div>
+									</div>
+								</article>
+							</div>
+						<!-- /foreach -->
+							<ul class="paginator no-edges no-style">
+							<!-- foreach $aSteps -->
+								<li>
+									<a href="#" class="btn btn-small" title="krok n">krok n</a>
+								</li>
+							<!-- /foreach -->
+							</ul>
+						</section>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="absolute">
+			<div class="container">
+				<nav>
+					<ul id="nav-main">
+						<!-- foreach aMenu -->
+						<li>
+							<a href="#" title="Odkaz">Odkaz</a>
+						</li>
+						<!-- /foreachh -->
+					</ul>
+				</nav>
+				<form id="formn-search">
+					<label for="input-search"></label>
+					<input id="input-search" type="search" required="required">
+					<button class="btn">Odeslat</button>
+				</form>
+				<div id="quick-info" data-toggle="toggle-hover">
+					<!-- foreach aInfo -->
+					<div class="item">
+						<span class="icon icon-img" style="background:url()"></span>
+						<div class="hide">
+							<!-- formatable text -->
+						</div>
+					</div>
+					<!-- /foreach -->
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="container">
+				<footer>
+				</footer>
+			</div>
+		</div>
+		<div id="brand">
+			<div class="container">
+		  		<a href="http://www.drevenanastenka.cz" target="new-window">http://www.drevenanastenka.cz</a>
+			</div>
+		</div>
+		<div class="modal-overlay"></div>
+		<script src="js/jquery.prettyPhoto.js"></script>
+		<script src="js/jquery.slider.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
+</html>
