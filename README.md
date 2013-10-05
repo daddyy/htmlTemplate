@@ -1,5 +1,4 @@
 #default HTML 5 template
-============
 
 ##Javascript
 - pokud to opravdu není nutné nevkládejte inline javascript, snažte se řešit jej obecně například v custom.js
