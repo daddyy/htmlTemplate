@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-	$('.hide, #nav-main .sub').hide();
+	$('.hide, #nav-main .sub, .modal').hide();
 
 	$("a[data-target^='prettyPhoto']").prettyPhoto({
 		show_title: true,
@@ -8,19 +8,19 @@ jQuery(document).ready(function($) {
 		social_tools: false
 	});
 
-	$('#slider').slides({
-		preload: false,
-		effect: 'slide',
-		crossfade: true,
-		slideSpeed: 350,
-		fadeSpeed: 500,
-		play: 3000,
-		hoverPause: true,
-		generateNextPrev: false,
-		generatePagination: false
-	});
+	// $('#slider').slides({
+	// 	preload: false,
+	// 	effect: 'slide',
+	// 	crossfade: true,
+	// 	slideSpeed: 350,
+	// 	fadeSpeed: 500,
+	// 	play: 3000,
+	// 	hoverPause: true,
+	// 	generateNextPrev: false,
+	// 	generatePagination: false
+	// });
 
-    $("a[data-window='new-window'], a[class='new-window']").click( function() {
+    $("a[data-window='new-window']").click( function() {
         window.open(this.href);
         return false;
     });
@@ -31,89 +31,37 @@ jQuery(document).ready(function($) {
     	$(this).removeClass('show');
     });
 
-    $('#nav-guide a').click(function (e) {
-    	e.preventDefault;
-    	var target = $(this).attr('href');
-    	if ($(this).parent().hasClass('selected') == false) {
-    		$('#guide .listing-guide').slideUp();
-    		$('#nav-guide li').removeClass('selected');
-    		$(this).parent().addClass('selected');
-    		$('#guide').find(target).slideDown();
-    	};
-    	return false;
-    })
 
-	$("*[data-target='toggle']").click(function (e) {
+	$("a[data-toggle='slideToggle']").click(function (e) {
 		var target = $(this).attr("href");
-		if(typeof target === 'undefined') {
-			var target = $(this).attr("data-href");
-		}
 		if($(target+":animated").length) {
 			return false;
 		} else {
-			$(target).toggle();
-		}
-	});
-
-	$("*[data-target='show']").click(function (e) {
-		var target = $(this).attr("href");
-		$('*[href="'+target+'"]').removeClass("selected");
-		if(typeof target === 'undefined') {
-			var target = $(this).attr("data-href");
-		}
-		if($(target+":animated").length) {
-			return false;
-		} else {
-			$(this).addClass("selected");
-			$(target).show();
+			$(target).slideToggle();
+			$(target).toggleClass('active');
+			$(this).toggleClass('selected');
 		}
 		return false;
 	});
-
-	$("*[data-target='hide']").click(function (e) {
-		var target = $(this).attr("href");
-		$('*[href="'+target+'"]').removeClass("selected");
-		if(typeof target === 'undefined') {
-			var target = $(this).attr("data-href");
-		}
-		if($(target+":animated").length) {
-			return false;
-		} else {
-			$(this).addClass("selected");
-			$(target).hide();
-		}
-		return false;
-	});
-
-  	$('*[data-toggle="toggle-hover"]').hover(function (e) {
-  		var target = $(this).attr("data-target");
-	    $(this).addClass('show');
-  	}, function (e) {
-  		$(this).removeClass('show');
-  	});
-
-
 
 	var width = $(document).width();
 	var height = $(document).height();
 
 	$('.modal').append('<span class="close">x</span>');
-
-	$('.modal-overlay').css({'height':height,'width':width});
+	$('body').append('<div class="modal-overlay"></div>');
 	$(document).keyup(function(e) {
 	  	if (e.keyCode == 27) {
-			$('.modal').hide();
-			$('.modal-overlay').hide();
+			$('.modal, .modal-overlay').hide();
 	  	}
 	});
 
-	$("*[data-target=modal]").click(function (e) {
+	$("a[data-target=modal]").click(function (e) {
 		e.preventDefault;
 		var target = $(this).attr("href");
 		if(typeof target === 'undefined') {
 			var target = $(this).attr("data-href");
 		}
-		$('.modal-overlay').show();
+		$('.modal-overlay').show().css({'height':height,'width':width});
 		$(target).show();
 		return false;
 	});

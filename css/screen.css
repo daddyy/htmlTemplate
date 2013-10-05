@@ -116,7 +116,7 @@ a:hover .icon, .btn:hover .icon, .selected .icon {
 /*
 	BACKGROUND
 */
-.input, .btn:hover {
+.input, .btn:hover, .btn.selected, .modal {
 	background-color: #F2F8F9;
 }
 .btn {
@@ -141,10 +141,10 @@ a:hover .icon, .btn:hover .icon, .selected .icon {
 	border:;
 	border-color:
 */
-.input, .btn {
+.input, .btn, .modal {
 	border: 1px solid;
 }
-.input, .btn:hover {
+.input, .btn:hover, .modal, .btn.selected {
 	border-color: #006bb6
 }
 {
@@ -165,10 +165,10 @@ a:hover .icon, .btn:hover .icon, .selected .icon {
 .btn {
 	color: #F2F8F9;
 }
-.btn:hover {
+.btn:hover, .btn.selected {
 	color: #006bb6;
 }
-#nav-main a:hover {
+#nav-main a:hover, .listing-products .item a {
 	color: #000000;
 }
 /*
@@ -205,7 +205,7 @@ a:hover .icon, .btn:hover .icon, .selected .icon {
 {
 	font-style: normal;
 }
-.btn {
+.listing-products .item a, .btn {
 	text-decoration: none;
 }
 {
@@ -285,6 +285,8 @@ HEADER
 */
 .paginator {
 	display: block;
+	width: auto;
+	clear: both;
 }
 /*
 	LISTING
@@ -414,6 +416,14 @@ HEADER
 	display:none;
 }
 /*
+	COLUMNS
+*/
+.col-4 .item {
+	float:left;
+	width: 25%;
+	display: inline-block;
+}
+/*
 	LISTING ARTICLES
 */
 .listing-articles .item {
@@ -430,11 +440,6 @@ HEADER
 .listing .image {
 	margin-right: 1em;
 	margin-bottom: 1em;
-}
-#footer #address.col-4 {
-	float:left;
-	width: 25%;
-	display: inline-block;
 }
 /* price */
 .price {

@@ -72,14 +72,14 @@ htmlTemplate - default template for everything :-)
 									<!-- if first -->
 									<li class="main">
 										<figure>
-											<a href="#" title="linked image" data-target="prettyPhoto[gallery]">
+											<a href="http://placekitten.com/900/900" title="linked image" data-target="prettyPhoto[gallery]">
 												<img src="http://placekitten.com/400/400" alt="main image" itemprop="image">
 											</a>
 										</figure>
 									</li>
 									<!-- /if first -->
 									<li class="thumbnail inline">
-										<a href="#" title="link thumbnail" data-target="prettyPhoto[gallery]">
+										<a href="http://placekitten.com/900/900" title="link thumbnail" data-target="prettyPhoto[gallery]">
 											<img src="http://placekitten.com/100/100" alt="thumbnail image" itemprop="image">
 										</a>
 									</li>
@@ -115,9 +115,12 @@ htmlTemplate - default template for everything :-)
 												<img src="http://placekitten.com/100/100" alt="image name" itemprop="image">
 											</figure>
 										</a>
-										<p>Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
+										<p>Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus <a href="#modal" data-target="modal" title="modal">convallis</a>, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
+										<a href="#more" class="pull-right btn" data-toggle="slideToggle">více</a>
+										<p id="more" class="hide">Praesent semper consequat nisl. Aliquam et lacus neque. Integer risus risus, molestie ac mauris non, bibendum interdum nibh. Ut ullamcorper felis et ante hendrerit, ac commodo justo vestibulum. Donec sed pharetra quam. Donec vulputate vel tortor nec porttitor. Quisque non vehicula leo. Cras eu dui nec neque consequat convallis ut eget risus. Aliquam rhoncus tortor ornare urna placerat, quis semper orci viverra. Nulla lobortis consectetur tincidunt. Nullam gravida id est nec fermentum. Nunc condimentum volutpat nunc non faucibus. Mauris pellentesque nulla at lorem ullamcorper placerat. Phasellus molestie urna erat, ac porttitor nulla tincidunt vel. Praesent adipiscing convallis elementum. Phasellus eleifend at lacus id aliquet. </p>
+									</div>
+									<div id="modal" class="modal">
 					                    <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-										<a href="#" class="pull-right btn">více</a>
 									</div>
 								</article>
 							</div>
@@ -132,7 +135,7 @@ htmlTemplate - default template for everything :-)
 						</section>
 					</div>
 
-					<div class="listing listing-products">
+					<div class="listing listing-products col-4">
 						<section>
 							<form id="sorter">
 	      						<fieldset class="no-style no-edges"> 
@@ -148,19 +151,17 @@ htmlTemplate - default template for everything :-)
 							<div class="item">
 								<article>
 									<div class="inner" itemscope itemtype="http://schema.org/Product">
-										<h1 class="main" itemprop="name"><a href="#" title="Product" itemprop="url">Product</a></h1>
-						        		<div class="states">
-						        	<!-- foreach $aStates -->
-							        		<span class="state">Tip</span>
-									<!-- /foreach -->
-							    		</div>
-										<div class="product-box">
-											<a href="#" title="link name" class="pull-left image">
-												<figure>
-													<img src="http://placekitten.com/200/200" alt="name of image" itemprop="image">
-												</figure>
-											</a>
-											<div class="cart pull-right" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+										<a href="#" title="link name" class="image" itemprop="url">
+											<h1 class="main" itemprop="name">Product</h1>
+							        		<div class="states">
+							        	<!-- foreach $aStates -->
+								        		<span class="state">Tip</span>
+										<!-- /foreach -->
+								    		</div>
+											<figure>
+												<img src="http://placekitten.com/200/200" alt="name of image" itemprop="image">
+											</figure>
+											<div class="cart" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 												<span class="prices">
 													<span class="price">Price with vat <strong itemprop="price">259</strong><span class="currency">CZK</span></span>
 													<span class="price">
@@ -168,13 +169,12 @@ htmlTemplate - default template for everything :-)
 													</span>
 													<span class="store-count" itemprop="availability">available</span>
 												</span>
-												<a href="#" class="btn" title="Product detail">detail</a>
+												<spam class="btn" title="Product detail">detail</span>
 											</div>
 											<div class="desc" itemprop="description">
-												<p>Nullam eget quam fermentum, placerat orci placerat, rutrum est. Curabitur at diam justo. Sed quam purus; porttitor quis convallis id, vestibulum in ligula. Maecenas ac consectetur neque. Curabitur eu semper metus, nec posuere odio. Cras lobortis non tellus nec elementum. Donec bibendum pharetra lacinia.</p>
-												<p>Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
+												<p>Nullam eget quam fermentum, placerat orci placerat, rutrum est. Curabitur at diam justo. Sed quam purus; porttitor quis convallis id, vestibulum a </p>
 											</div>
-										</div>
+										</a>
 									</div>
 								</article>
 							</div>
@@ -198,7 +198,13 @@ htmlTemplate - default template for everything :-)
 					<ul id="nav-main" class="inline no-edges no-style" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<!-- foreach aMenu -->
 						<li class="selected"><a href="#" title="home" itemprop="url"><span itemprop="name">home</span></a></li>
-						<li><a href="#" title="Category" itemprop="url"><span itemprop="name">Category</span></a></li>
+						<li><a href="#" title="Category" itemprop="url"><span itemprop="name">Category</span></a>
+							<ul class="sub no-edges no-style">
+								<!-- if you want make those <li> sub with width:auto you have to make the spaces as "&nbsp;" -->
+								<li><a href="#" title="SubCategory" itemprop="url"><span itemprop="name">SubCategory</span></a></li>
+								<li><a href="#" title="SubCategory 2" itemprop="url"><span itemprop="name">SubCategory&nbsp;2</span></a>
+							</ul>
+						</li>
 						<li class="last"><a href="#" title="Category 2" itemprop="url"><span itemprop="name">Category 2</span></a>
 							<ul class="sub no-edges no-style">
 								<!-- if you want make those <li> sub with width:auto you have to make the spaces as "&nbsp;" -->
