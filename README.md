@@ -1,0 +1,4 @@
+htmlTemplate
+============
+
+default HTML template
