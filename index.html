@@ -29,20 +29,20 @@ htmlTemplate - default template for everything :-)
 	<!-- if you use in your html templates canvas 
 		<canvas id="canvas">Your browser does not support the &lt;canvas&gt; element!</canvas>
 	-->
-		<noscript><p class="msg msg-info">You must have JavaScript enabled to use this site.</p></noscript>
+		<noscript><p class="msg msg-info">You have to enable JavaScript when you want to use this site.</p></noscript>
 		<ul id="navSkiplink" class="hide">
 			<li>
-				<a href="#content" title="Skip to content">Přeskočit na obsah</a>
+				<a href="#content" title="Skip to content">Skip to content</a>
 			</li>
 			<li>
-				<a href="#navMain" title="Skip to navigation">Přeskočit na obsah</a>
+				<a href="#navMain" title="Skip to navigation">Skip to navigation</a>
 			</li>
 		</ul>
 		<div id="header">
 			<div class="container">
 				<header>
 					<hgroup>
-						<h1 id="logo"><a href="#" title=""><img src="http://placekitten.com/90/24" alt=""><span class="hide" itemprop="name">logo</span></a></h1>
+						<h1 id="logo" itemscope itemtype="http://schema.org/Brand"><a href="#" title=""><img src="http://placekitten.com/90/24" alt="logo" itemprop="logo"><span class="hide" itemprop="name">logo</span></a></h1>
 						<h2 id="slogan"></h2>
 					</hgroup>
 				</header>
@@ -55,14 +55,14 @@ htmlTemplate - default template for everything :-)
 					<ul id="breadcrumbs" class="nav no-edges no-style inline" itemprop="breadcrumb">
 					<!-- foreach aBreadcrumbs -->
 						<!-- if first -->
-						<li><a href="#" title="Domů">Domů</a></li>
+						<li><a href="#" title="Home">Home</a></li>
 						<!-- /if first -->
 						<li><a href="#" title="Next">Next</a></li>
 					<!-- /foreach -->
 					</ul>
 
 					<article>
-				    	<h1 class="title">Nadpis stránky</h1>
+				    	<h1 class="title">Main title of this page</h1>
 					    <p class="desc">Ut at nisi vel risus iaculis cursus. Donec rutrum turpis massa. Vivamus urna purus, blandit eu tellus ut, semper rutrum tortor! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum cursus tempus. Phasellus convallis, odio sed molestie interdum, turpis velit lobortis nibh, sit amet ornare eros arcu sit amet urna. Integer at libero ac sapien imperdiet ullamcorper? Aenean eget nibh eu nibh adipiscing ultrices.</p>
 						<!-- if aImages -->
 						<div class="images">
@@ -105,9 +105,9 @@ htmlTemplate - default template for everything :-)
 						<!-- foreach aArticles -->
 							<div class="item" itemscope itemtype="http://schema.org/Article">
 								<article>
-									<a href="#" title="link name" class="pull-left">
+									<a href="#" title="link name" class="pull-left" itemprop="url">
 										<figure>
-											<img src="http://placekitten.com/90/24" alt="image name">
+											<img src="http://placekitten.com/90/24" alt="image name" itemprop="image">
 										</figure>
 									</a>
 									<h1 class="main" itemprop="name">
@@ -121,11 +121,11 @@ htmlTemplate - default template for everything :-)
 								</article>
 							</div>
 							<!-- /foreach -->
-							<ul class="paginator no-edges no-style">
+							<ul class="paginator no-edges no-style center">
+								<li class="pull-left"><a href="#" class="btn btn-small" title="prev">prev</a></li>
+								<li class="pull-right"><a href="#" class="btn btn-small" title="next">next</a></li>
 							<!-- foreach $aSteps -->
-								<li>
-									<a href="#" class="btn btn-small" title="krok n">krok n</a>
-								</li>
+								<li><a href="#" class="btn btn-small" title="step 1">1</a></li>
 							<!-- /foreach -->
 							</ul>
 						</section>
@@ -136,10 +136,10 @@ htmlTemplate - default template for everything :-)
 							<div id="sorter">
 								<form id="sort-price">
 		      						<fieldset class="no-style no-edges"> 
-			        					<label for="products-by-price">Seřadit podle ceny</label> 
+			        					<label for="products-by-price">Sort by price</label> 
 			        					<select name="products-by-price" id="products-by-price">
-			        						<option value="lowestPrice">Nejnížsí</option>
-			        						<option value="highestPrice">Nejvyšší</option>
+			        						<option value="lowestPrice">Lowest</option>
+			        						<option value="highestPrice">Highest</option>
 			        					</select>
 		      						</fieldset>
 								</form>
@@ -148,7 +148,7 @@ htmlTemplate - default template for everything :-)
 							<div class="item">
 								<article>
 									<div class="inner" itemscope itemtype="http://schema.org/Product">
-										<h1 class="main" itemprop="name"><a href="#" title="produkt">produkt</a></h1>
+										<h1 class="main" itemprop="name"><a href="#" title="Product" itemprop="url">Product</a></h1>
 						        		<div class="states">
 						        	<!-- foreach $aStates -->
 							        		<span class="state">Tip</span>
@@ -161,13 +161,13 @@ htmlTemplate - default template for everything :-)
 										</a>
 										<div class="cart" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 											<span class="prices">
-												<span class="price price-final">Cena s DPH&nbsp;<strong itemprop="price">259</strong><span class="currency">Kč</span></span>
+												<span class="price price-final">Price with vat&nbsp;<strong itemprop="price">259</strong><span class="currency">CZK</span></span>
 												<span class="price price-taxless">
-													bez DPH 200 Kč
+													Price without vat <em>200</em><span class="currency">CZK</span>
 												</span>
-												<span class="store-count" itemprop="availability">dostupný</span>
+												<span class="store-count" itemprop="availability">available</span>
 											</span>
-											<a href="#" class="btn" title="produkt">detail</a>
+											<a href="#" class="btn" title="Product detail">detail</a>
 										</div>
 										<div class="desc" itemprop="description">
 											<p>Nullam eget quam fermentum, placerat orci placerat, rutrum est. Curabitur at diam justo. Sed quam purus; porttitor quis convallis id, vestibulum in ligula. Maecenas ac consectetur neque. Curabitur eu semper metus, nec posuere odio. Cras lobortis non tellus nec elementum. Donec bibendum pharetra lacinia.</p>
@@ -177,11 +177,11 @@ htmlTemplate - default template for everything :-)
 								</article>
 							</div>
 						<!-- /foreach -->
-							<ul class="paginator no-edges no-style">
+							<ul class="paginator no-edges no-style center">
+								<li class="pull-left"><a href="#" class="btn btn-small" title="prev">prev</a></li>
+								<li class="pull-right"><a href="#" class="btn btn-small" title="next">next</a></li>
 							<!-- foreach $aSteps -->
-								<li>
-									<a href="#" class="btn btn-small" title="krok n">krok n</a>
-								</li>
+								<li><a href="#" class="btn btn-small" title="step 1">1</a></li>
 							<!-- /foreach -->
 							</ul>
 						</section>
@@ -193,10 +193,12 @@ htmlTemplate - default template for everything :-)
 		<div id="absolute">
 			<div class="container">
 				<nav>
-					<ul id="nav-main">
+					<ul id="nav-main" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<!-- foreach aMenu -->
 						<li>
-							<a href="#" title="Odkaz">Odkaz</a>
+							<a href="#" title="home" itemprop="url"><span itemprop="name">home</span></a>
+							<a href="#" title="link" itemprop="url"><span itemprop="name">Link</span></a>
+							<a href="#" title="link" itemprop="url"><span itemprop="name">Link</span></a>
 						</li>
 						<!-- /foreachh -->
 					</ul>
@@ -204,12 +206,12 @@ htmlTemplate - default template for everything :-)
 				<form id="formn-search">
 					<label for="input-search"></label>
 					<input id="input-search" type="search" required="required">
-					<button class="btn">Odeslat</button>
+					<button class="btn">Send</button>
 				</form>
 				<div id="quick-info" data-toggle="toggle-hover">
 					<!-- foreach aInfo -->
 					<div class="item">
-						<span class="icon icon-img" style="background:url()"></span>
+						<span class="icon icon-img" style="background:url(http://placekitten.com/24/24)"></span>
 						<div class="hide">
 							<!-- formatable text -->
 						</div>

@@ -35,6 +35,14 @@ table td {
 .pull-none {
 	float:none !important;
 }
+.center {
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+}
+.center li {
+	display: inline;
+}
 /*msg*/
 p.msg {
 	text-align:center;
@@ -225,7 +233,7 @@ HEADER
 	PAGINATOR
 */
 .paginator {
-
+	display: block;
 }
 /*
 	LISTING
