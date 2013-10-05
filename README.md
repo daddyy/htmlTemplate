@@ -7,6 +7,7 @@
 
 ##CSS
 - základam oprimalizace pro prohlížeče je sjednocení a normalizace stylů https://github.com/necolas/normalize.css
+- jedinou velikost kterou znáte je velikost základního fontu a velikost containeru, vše ostatní je relativní pro umisťování bloků!
 - vždy volejte nejdříve CSS knihovny, které používáte, až poté volejte své vlastní
 - vše co je dáno grafikou patří do CSS -> tzn. vyhněte se vkládání obrázku tagem <img />
 - definice v css * {margin:0;padding:0;} je opravdu zbytečné a nesmyslná, důvod k tomu je, že obsah vložený skrze wysiwyg webmasterem následně musíte stylovat celý. 
